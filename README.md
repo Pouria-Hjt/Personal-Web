@@ -1,24 +1,18 @@
-This is a Personal Web project base on [next.js](https://nextjs.org/) version 13 written in [typescript](https://www.typescriptlang.org/) and styled by [TailwindCss](https://tailwindcss.com/)
+# Vue 3 + TypeScript + Vite
 
-## Getting Started
+This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-First, run the development server:
+## Recommended IDE Setup
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Type Support For `.vue` Imports in TS
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
 
-## Learn More
+If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
 
-If you want to learn more about next.js and tailwindcss i suggest that you start by reading it's documents
-
-- [Next.js Document](https://nextjs.org/)
-- [Tailwindcss Document](https://tailwindcss.com/)
+1. Disable the built-in TypeScript Extension
+   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
+   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
+2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
