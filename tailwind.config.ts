@@ -11,7 +11,14 @@ const config: Config = {
       colors: {
         primary: "#9747FF",
         secondary: "rgba(34,36,38)",
-        tertiary: "#222426"
+        tertiary: "#222426",
+        quaternary: "#323232",
+      },
+      borderRadius: {
+        "2.5xl": "1.25rem",
+      },
+      spacing: {
+        18: "4.5rem",
       }
     },
   },
