@@ -28,11 +28,23 @@ const config: Config = {
       },
       animation: {
         workdown: "workdown 2s linear infinite",
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+
       },
       keyframes: {
         "workdown": {
           "50%": { transform: "scale(1.25)" },
         },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+
       }
     },
   },

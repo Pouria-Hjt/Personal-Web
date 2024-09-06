@@ -5,14 +5,16 @@ import { cn } from "@/utils";
 import { CardArrowIcon } from "@/assets/icons";
 import Link from "next/link";
 
+type CardImage = {
+  src?: string;
+  alt?: string;
+  icon?: JSX.Element;
+};
+
 type Props = {
   title?: string;
   hoverableTitle?: boolean;
-  image?: {
-    src: string;
-    alt: string;
-    className?: string;
-  };
+  image?: CardImage;
   animation: Animations;
   duration?: number;
   className?: string;
@@ -20,6 +22,10 @@ type Props = {
     link: string;
     text: string;
     animation?: Animations;
+  };
+  classNames?: {
+    title?: string;
+    image?: string;
   };
 } & PropsWithChildren;
 
@@ -32,6 +38,7 @@ const Card = ({
   className,
   footer,
   children,
+  classNames,
 }: Props) => {
   return (
     <Animate
@@ -39,7 +46,7 @@ const Card = ({
       as={"div"}
       animation={animation}
       className={cn(
-        "group w-full rounded-2.5xl bg-secondary/40 p-8 border space-y-1 relative flex flex-col justify-between border-tertiary hover:shadow-box",
+        "group w-full rounded-2.5xl bg-secondary/40 p-8 border relative flex flex-col justify-between border-tertiary hover:shadow-box",
         className ? className : ""
       )}>
       {title && (
@@ -48,21 +55,30 @@ const Card = ({
             " font-medium text-2xl leading-128",
             hoverableTitle
               ? "text-white/40 group-hover:text-white transition-all duration-400"
-              : "text-white"
+              : "text-white",
+            classNames?.title
           )}>
           {title}
         </h3>
       )}
 
-      {image && (
+      {image && !image.icon ? (
         <img
-          src={image.src}
+          src={image?.src}
           className={cn(
-            "absolute top-4 right-5 animate-workdown",
-            image.className
+            "absolute top-4 right-5 animate-workdown !mt-0",
+            classNames?.image
           )}
           alt={image.alt}
         />
+      ) : (
+        <span
+          className={cn(
+            "absolute top-4 right-5 animate-workdown !mt-0",
+            classNames?.image
+          )}>
+          {image?.icon}
+        </span>
       )}
 
       {children}
@@ -70,7 +86,7 @@ const Card = ({
         <Animate animation={footer.animation || "fade-up"} as={"div"}>
           <Link
             href={footer.link}
-            className="w-full flex justify-between items-center group ">
+            className="w-full flex justify-between items-center group">
             <span className="text-white font-medium transition-all duration-400 group-hover:text-primary">
               {footer.text}
             </span>
