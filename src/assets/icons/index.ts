@@ -1,0 +1,1 @@
+export { CardArrowIcon } from "./CardArrow.icon"

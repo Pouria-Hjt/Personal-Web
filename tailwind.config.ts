@@ -19,6 +19,20 @@ const config: Config = {
       },
       spacing: {
         18: "4.5rem",
+      },
+      transitionDuration: {
+        400: "400ms",
+      },
+      lineHeight: {
+        128: "128%",
+      },
+      animation: {
+        workdown: "workdown 2s linear infinite",
+      },
+      keyframes: {
+        "workdown": {
+          "50%": { transform: "scale(1.25)" },
+        },
       }
     },
   },

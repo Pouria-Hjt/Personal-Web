@@ -21,6 +21,10 @@
     -ms-transition: all 0.4s;
     -o-transition: all 0.4s;
   }
+  .shadow-box {
+    box-shadow: rgba(204, 219, 232, 0.05) 3px 3px 6px 0px inset,
+      rgba(255, 255, 255, 0.033) -3px -3px 6px 1px inset;
+  }
 }
 
 [data-aos^="fade"][data-aos^="fade"] {

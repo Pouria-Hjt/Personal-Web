@@ -1,0 +1,1 @@
+export interface IIcon extends React.SVGProps<SVGSVGElement> { } 
