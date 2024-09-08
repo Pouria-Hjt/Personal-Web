@@ -55,7 +55,7 @@ const TechnologiesCard = (props: Props) => {
             </div>
           ))}
         </Marquee>
-        <Marquee className="[--duration:40s] [--gap:8px]" reverse>
+        <Marquee className="[--duration:40s] [--gap:8px] mt-1" reverse>
           {TechnologiesIcons.map((icon, i) => (
             <div
               key={`icon-${i}`}

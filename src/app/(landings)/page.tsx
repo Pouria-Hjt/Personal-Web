@@ -1,11 +1,14 @@
 import React from "react";
 import {
   BiographyCard,
+  CenteredCard,
   LatestWorksCard,
   MarqueeCard,
+  SocialsCard,
   TechnologiesCard,
   TitleCard,
 } from "./_components";
+import { Card } from "@/ui/Card/Card";
 
 type Props = {};
 
@@ -22,8 +25,24 @@ const Home = (props: Props) => {
             <LatestWorksCard />
             <TechnologiesCard />
           </div>
-          <div className="">
+          <div className="space-y-6">
             <MarqueeCard />
+            <div className="grid grid-cols-2 gap-6">
+              <div className="space-y-6 w-full">
+                <CenteredCard
+                  animation="fade-down"
+                  description="YEARS EXPERIENCE"
+                  title="03"
+                />
+                <CenteredCard
+                  className="!mt-[38px]"
+                  animation="fade-up"
+                  description="ToTal PROJECTS"
+                  title="10"
+                />
+              </div>
+              <SocialsCard />
+            </div>
           </div>
         </div>
         <div className="grid grid-cols-4 w-full"></div>

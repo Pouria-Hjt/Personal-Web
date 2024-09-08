@@ -25,6 +25,7 @@ const config: Config = {
       },
       lineHeight: {
         128: "128%",
+        150: "150%",
       },
       animation: {
         workdown: "workdown 2s linear infinite",
