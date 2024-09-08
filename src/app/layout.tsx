@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${kanit.className} w-full h-fit min-h-screen text-white`}>
+        className={`${kanit.className} select-none w-full h-fit min-h-screen text-white`}>
         <Providers>{children}</Providers>
       </body>
     </html>

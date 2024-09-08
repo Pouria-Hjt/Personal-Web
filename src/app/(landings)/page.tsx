@@ -1,11 +1,9 @@
-import { StarsIcon } from "@/assets/icons";
-import { Card } from "@/ui/Card/Card";
-import { Marquee } from "@/ui/magic";
 import React from "react";
 import {
   BiographyCard,
   LatestWorksCard,
   MarqueeCard,
+  TechnologiesCard,
   TitleCard,
 } from "./_components";
 
@@ -20,8 +18,9 @@ const Home = (props: Props) => {
       </div>
       <div className="col-span-4">
         <div className="grid grid-cols-2 gap-6">
-          <div>
+          <div className="space-y-6">
             <LatestWorksCard />
+            <TechnologiesCard />
           </div>
           <div className="">
             <MarqueeCard />
