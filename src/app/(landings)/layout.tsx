@@ -1,5 +1,5 @@
 import { BackgroundBeamsWithCollision } from "@/ui/aceternity";
-import { Navbar } from "./_components";
+import { Footer, Navbar } from "./_components";
 
 export default function LandingsLayout({
   children,
@@ -11,6 +11,7 @@ export default function LandingsLayout({
       {/* <BackgroundBeamsWithCollision className="flex-col items-start justify-start"> */}
       <Navbar />
       {children}
+      <Footer />
       {/* </BackgroundBeamsWithCollision> */}
     </div>
   );
