@@ -86,11 +86,11 @@ const Card = ({
         <Animate animation={footer.animation || "fade-up"} as={"div"}>
           <Link
             href={footer.link}
-            className="w-full flex justify-between items-center group">
-            <span className="text-white font-medium transition-all duration-400 group-hover:text-primary">
+            className="w-full flex justify-between items-center group/footer">
+            <span className="text-white font-medium transition-all duration-400 group-hover/footer:text-primary">
               {footer.text}
             </span>
-            <CardArrowIcon className="size-10 fill-white  transition-all duration-400 group-hover:fill-primary" />
+            <CardArrowIcon className="size-10 fill-white  transition-all duration-400 group-hover/footer:fill-primary" />
           </Link>
         </Animate>
       )}
