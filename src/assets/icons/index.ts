@@ -1,0 +1,5 @@
+export { CardArrowIcon } from "./CardArrow.icon"
+export { StarsIcon } from "./Stars.icon"
+export { MessageIcon } from "./Message.icon"
+export { InstagramIcon } from "./Instagram.icon"
+export { TelegramIcon } from "./Telegram.icon"
