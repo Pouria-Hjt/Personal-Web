@@ -47,22 +47,26 @@ const TechnologiesCard = (props: Props) => {
       }}>
       <div>
         <Marquee className="[--duration:40s] [--gap:8px]">
-          {TechnologiesName.map((tech, i) => (
-            <div
-              key={`skill-${tech}--${i}`}
-              className="px-3 py-2 text-white/60 rounded-lg text-sm transition-all duration-200 ease-out border border-secondary hover:text-white hover:border-[#3d4043]">
-              {tech}
-            </div>
-          ))}
+          <div>
+            {TechnologiesName.map((tech, i) => (
+              <div
+                key={`skill-${tech}--${i}`}
+                className="px-3 py-2 text-white/60 rounded-lg text-sm transition-all duration-200 ease-out border border-secondary hover:text-white hover:border-[#3d4043]">
+                {tech}
+              </div>
+            ))}
+          </div>
         </Marquee>
         <Marquee className="[--duration:40s] [--gap:8px] mt-1" reverse>
-          {TechnologiesIcons.map((icon, i) => (
-            <div
-              key={`icon-${i}`}
-              className="size-12 fill-primary flex justify-center items-center rounded-lg text-sm transition-all duration-500 ease-in-out border border-secondary hover:text-white hover:border-[#3d4043] hover:bg-primary hover:fill-white ">
-              {icon}
-            </div>
-          ))}
+          <div>
+            {TechnologiesIcons.map((icon, i) => (
+              <div
+                key={`icon-${i}`}
+                className="size-12 fill-primary flex justify-center items-center rounded-lg text-sm transition-all duration-500 ease-in-out border border-secondary hover:text-white hover:border-[#3d4043] hover:bg-primary hover:fill-white ">
+                {icon}
+              </div>
+            ))}
+          </div>
         </Marquee>
       </div>
     </Card>
