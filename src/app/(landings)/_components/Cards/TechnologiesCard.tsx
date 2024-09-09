@@ -26,15 +26,15 @@ const TechnologiesName: string[] = [
   "Redux",
 ];
 const TechnologiesIcons: React.ReactNode[] = [
-  <NextjsIcon className="size-8" />,
-  <ReactjsIcon className="size-8" />,
-  <ScssIcon className="size-8" />,
-  <CssIcon className="size-8" />,
-  <TailwindIcon className="size-8" />,
-  <JsIcon className="size-8" />,
-  <GithubIcon className="size-8" />,
-  <TsIcon className="size-8" />,
-  <ReduxIcon className="size-8" />,
+  <NextjsIcon key={"NextjsIcon"} className="size-8" />,
+  <ReactjsIcon key={"ReactjsIcon"} className="size-8" />,
+  <ScssIcon key={"ScssIcon"} className="size-8" />,
+  <CssIcon key={"CssIcon"} className="size-8" />,
+  <TailwindIcon key={"TailwindIcon"} className="size-8" />,
+  <JsIcon key={"JsIcon"} className="size-8" />,
+  <GithubIcon key={"GithubIcon"} className="size-8" />,
+  <TsIcon key={"TsIcon"} className="size-8" />,
+  <ReduxIcon key={"ReduxIcon"} className="size-8" />,
 ];
 const TechnologiesCard = (props: Props) => {
   return (
@@ -45,30 +45,24 @@ const TechnologiesCard = (props: Props) => {
       classNames={{
         title: "text-2xl leading-[150%] px-6 mb-5",
       }}>
-      <div>
-        <Marquee className="[--duration:40s] [--gap:8px]">
-          <div>
-            {TechnologiesName.map((tech, i) => (
-              <div
-                key={`skill-${tech}--${i}`}
-                className="px-3 py-2 text-white/60 rounded-lg text-sm transition-all duration-200 ease-out border border-secondary hover:text-white hover:border-[#3d4043]">
-                {tech}
-              </div>
-            ))}
+      <Marquee className="[--duration:40s] [--gap:8px]">
+        {TechnologiesName.map((tech, i) => (
+          <div
+            key={`skill-${tech}--${i}`}
+            className="px-3 py-2 text-white/60 rounded-lg text-sm transition-all duration-200 ease-out border border-secondary hover:text-white hover:border-[#3d4043]">
+            {tech}
           </div>
-        </Marquee>
-        <Marquee className="[--duration:40s] [--gap:8px] mt-1" reverse>
-          <div>
-            {TechnologiesIcons.map((icon, i) => (
-              <div
-                key={`icon-${i}`}
-                className="size-12 fill-primary flex justify-center items-center rounded-lg text-sm transition-all duration-500 ease-in-out border border-secondary hover:text-white hover:border-[#3d4043] hover:bg-primary hover:fill-white ">
-                {icon}
-              </div>
-            ))}
+        ))}
+      </Marquee>
+      <Marquee className="[--duration:40s] [--gap:8px] mt-1" reverse>
+        {TechnologiesIcons.map((icon, i) => (
+          <div
+            key={`icon-${i}`}
+            className="size-12 fill-primary flex justify-center items-center rounded-lg text-sm transition-all duration-500 ease-in-out border border-secondary hover:text-white hover:border-[#3d4043] hover:bg-primary hover:fill-white ">
+            {icon}
           </div>
-        </Marquee>
-      </div>
+        ))}
+      </Marquee>
     </Card>
   );
 };
