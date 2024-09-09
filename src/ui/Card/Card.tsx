@@ -11,7 +11,7 @@ type CardImage = {
   icon?: JSX.Element;
 };
 
-type Props = {
+export type CardProps = {
   title?: string;
   hoverableTitle?: boolean;
   image?: CardImage;
@@ -39,7 +39,7 @@ const Card = ({
   footer,
   children,
   classNames,
-}: Props) => {
+}: CardProps) => {
   return (
     <Animate
       duration={duration || 1000}

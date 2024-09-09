@@ -7,6 +7,7 @@ import {
   SocialsCard,
   TechnologiesCard,
   TitleCard,
+  TitledCard,
 } from "./_components";
 import { Card } from "@/ui/Card/Card";
 
@@ -45,7 +46,59 @@ const Home = (props: Props) => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-4 w-full"></div>
+        <div className="grid grid-cols-4 w-full mt-6 gap-6">
+          <TitledCard
+            className="aspect-square w-full p-6"
+            icon={{
+              src: "https://softivuspro.com/bentox/bontox/assets/images/global/s-shape1.png",
+              alt: "shape1",
+            }}
+            animation="fade-up-left"
+            footer={{
+              link: "/",
+              text: "All Services",
+              animation: "fade-up",
+            }}
+            classNames={{
+              image: "animate-none top-0 right-0",
+            }}
+            title="Services"
+          />
+          <TitledCard
+            className="w-full col-span-2 p-6"
+            icon={{
+              src: "https://softivuspro.com/bentox/bontox/assets/images/global/s-shape2.png",
+              alt: "shape1",
+            }}
+            animation="fade-up"
+            footer={{
+              link: "/",
+              text: "All Services",
+              animation: "fade-up",
+            }}
+            classNames={{
+              image: "animate-none ",
+            }}
+            title="Let’s Works Together"
+          />
+          <TitledCard
+            className="aspect-square w-full p-6"
+            icon={{
+              src: "https://softivuspro.com/bentox/bontox/assets/images/global/s-shape3.png",
+              alt: "shape1",
+            }}
+            animation="fade-down-right"
+            footer={{
+              link: "/",
+              text: "All Blog",
+              animation: "fade-up",
+            }}
+            classNames={{
+              image: "animate-none top-0 ",
+            }}
+            title="Blog"
+          />
+        </div>
       </div>
     </main>
   );

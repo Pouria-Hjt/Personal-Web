@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 
 const Providers = ({ children }: PropsWithChildren) => {
   useEffect(() => {
-    Aos.init();
+    Aos.init({ once: true });
   }, []);
   return <>{children}</>;
 };
