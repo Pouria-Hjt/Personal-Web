@@ -1,0 +1,8 @@
+export { TitleCard } from "./TitleCard"
+export { BiographyCard } from "./BiographyCard"
+export { LatestWorksCard } from "./LatestWorksCard"
+export { MarqueeCard } from "./MarqueeCard"
+export { TechnologiesCard } from "./TechnologiesCard"
+export { CenteredCard } from "./CenteredCard"
+export { SocialsCard } from "./SocialsCard"
+export { TitledCard } from "./TitledCard"

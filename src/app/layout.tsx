@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Kanit } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/features";
 
-const inter = Inter({ subsets: ["latin"] });
+const kanit = Kanit({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  adjustFontFallback: true,
+  display: "swap",
+  preload: true,
+  variable: "--font-kanit",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +24,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="w-full h-screen p-10">
+      <body
+        className={`${kanit.className} select-none w-full h-fit min-h-screen text-white`}>
         <Providers>{children}</Providers>
       </body>
     </html>
