@@ -5,3 +5,4 @@
  */
 export type { Animations } from "./Aos"
 export type { IIcon } from "./IIcon"
+export type { ISocialBox } from "./ISocialBox"
