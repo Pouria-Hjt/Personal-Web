@@ -1,4 +1,5 @@
 import { MessageIcon } from "@/assets/icons";
+import { pages } from "@/configs";
 import { Animate } from "@/ui/Animate/Animate";
 import { Card } from "@/ui/Card/Card";
 import GroupButton from "@/ui/GroupButton/GroupButton";
@@ -12,7 +13,7 @@ const BiographyCard = (props: Props) => {
       animation="zoom-in-up"
       duration={100}
       footer={{
-        link: "/",
+        link: pages.about,
         text: "Biography",
       }}>
       <Animate
@@ -37,7 +38,7 @@ const BiographyCard = (props: Props) => {
         as={"a"}
         text="I'm Pouria Hajati"
         className="gap-1 h-14 w-full"
-        href={"/"}
+        href={pages.about}
         classNames={{
           textButton: "rounded-lg text-xl flex-1",
           iconButton: "rounded-lg",

@@ -10,6 +10,7 @@ import {
   TitledCard,
 } from "./_components";
 import { Card } from "@/ui/Card/Card";
+import { pages } from "@/configs";
 
 type Props = {};
 
@@ -55,7 +56,7 @@ const Home = (props: Props) => {
             }}
             animation="fade-up-left"
             footer={{
-              link: "/",
+              link: pages.offerings,
               text: "All Services",
               animation: "fade-up",
             }}
@@ -72,7 +73,7 @@ const Home = (props: Props) => {
             }}
             animation="fade-up"
             footer={{
-              link: "/",
+              link: pages.offerings,
               text: "All Services",
               animation: "fade-up",
             }}
@@ -89,7 +90,7 @@ const Home = (props: Props) => {
             }}
             animation="fade-down-right"
             footer={{
-              link: "/",
+              link: pages.blog,
               text: "All Blog",
               animation: "fade-up",
             }}

@@ -3,6 +3,7 @@ import GroupButton from "@/ui/GroupButton/GroupButton";
 import Link from "next/link";
 import React from "react";
 import { NavItem } from "./NavItem";
+import { pages } from "@/configs";
 
 type Props = {};
 
@@ -17,12 +18,12 @@ const Navbar = (props: Props) => {
         pouria<span className="text-primary">H</span>
       </h1>
       <div className="w-fit flex justify-center items-center gap-10">
-        <NavItem link="/" text="Home" />
-        <NavItem link="/about" text="About" />
-        <NavItem link="/projects" text="Works" />
-        <NavItem link="/contact" text="Contact" />
+        <NavItem link={pages.home} text="Home" />
+        <NavItem link={pages.about} text="About" />
+        <NavItem link={pages.works} text="Works" />
+        <NavItem link={pages.contact} text="Contact" />
       </div>
-      <GroupButton as="a" text="let's talk" href="/contact" scroll />
+      <GroupButton as="a" text="let's talk" href={pages.contact} scroll />
     </Animate>
   );
 };

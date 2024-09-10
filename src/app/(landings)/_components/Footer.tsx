@@ -1,5 +1,6 @@
 import React from "react";
 import { NavItem } from "./NavItem";
+import { pages } from "@/configs";
 
 type Props = {};
 
@@ -20,10 +21,10 @@ const Footer = (props: Props) => {
           </span>
         </div>
         <div className="flex justify-center items-center gap-12">
-          <NavItem link="/" text="Home" />
-          <NavItem link="/about" text="about" />
-          <NavItem link="/projects" text="works" />
-          <NavItem link="/contact" text="contact" />
+          <NavItem link={pages.home} text="Home" />
+          <NavItem link={pages.about} text="about" />
+          <NavItem link={pages.works} text="works" />
+          <NavItem link={pages.contact} text="contact" />
         </div>
       </div>
     </footer>

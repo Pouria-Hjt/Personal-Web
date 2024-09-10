@@ -1,4 +1,5 @@
 import { StarsIcon } from "@/assets/icons";
+import { pages } from "@/configs";
 import { Card } from "@/ui/Card/Card";
 import React from "react";
 
@@ -18,7 +19,7 @@ const LatestWorksCard = (props: Props) => {
       }}
       className="py-4"
       footer={{
-        link: "/projects",
+        link: pages.works,
         text: "All projects",
       }}>
       <div className="mx-auto max-w-72 aspect-video w-fit h-fit p-1 bg-[#222426] rounded-2xl mb-4">
