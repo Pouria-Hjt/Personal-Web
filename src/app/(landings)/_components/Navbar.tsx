@@ -5,7 +5,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { NavItem } from "./NavItem";
 import { pages } from "@/configs";
-import { MoreVertical } from "lucide-react";
 import { AnimatedMenuIcon } from "@/assets/icons/AnimatedMenuIcon";
 import { cn } from "@/utils";
 
@@ -20,11 +19,11 @@ const Navbar = (props: Props) => {
         animation="fade-down"
         as={"div"}
         className={cn(
-          "bg-nav hover:shadow-nav nav-transition relative mx-auto my-4 flex w-full max-w-screen-lg flex-col items-center justify-between rounded-2.5xl border border-quaternary px-4 py-1 backdrop-blur-xl transition-all duration-500 md:my-14 md:flex-row md:p-4 md:px-10 xl:max-w-screen-xl",
-          isOpen ? "max-h-52" : "max-h-18",
+          "bg-nav hover:shadow-nav nav-transition relative mx-auto my-4 flex w-full max-w-screen-lg flex-col items-center justify-between rounded-2.5xl border border-quaternary backdrop-blur-xl md:my-14 md:flex-row md:p-4 md:px-10 xl:max-w-screen-xl",
+          "overflow-hidden", // Add overflow hidden to contain the animation
         )}
       >
-        <div className="flex w-full items-center justify-between">
+        <div className="flex w-full items-center justify-between px-4 py-3">
           <h1 className="text-3xl font-semibold capitalize">
             pouria<span className="text-primary">H</span>
           </h1>
@@ -49,13 +48,16 @@ const Navbar = (props: Props) => {
         </div>
         <div
           className={cn(
-            "mobile-menu w-full flex-1 md:hidden",
-            "grid grid-cols-2 justify-items-center gap-4 py-1",
-            "transition-all duration-500",
+            "mobile-menu w-full md:hidden",
+            "grid grid-cols-2 justify-items-center gap-4",
+            "transform transition-all duration-300 ease-in-out",
             isOpen
-              ? "visible h-auto max-h-52 opacity-100"
-              : "invisible h-0 max-h-0 opacity-0",
+              ? "visible max-h-52 translate-y-0 opacity-100"
+              : "invisible max-h-0 -translate-y-4 opacity-0",
           )}
+          style={{
+            padding: isOpen ? "1rem" : "0",
+          }}
         >
           <NavItem link={pages.home} text="Home" />
           <NavItem link={pages.about} text="About" />

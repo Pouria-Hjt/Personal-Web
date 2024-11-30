@@ -26,7 +26,9 @@ const Animate: React.FC<Props & React.HTMLAttributes<HTMLElement>> = ({
       data-aos-duration={duration || 400}
       data-aos-easing={easingFunction || "ease-in-out"}
       data-aos-delay={delay || 0}
-      {...props}>
+      data-aos-once="true"
+      {...props}
+    >
       {children}
     </Component>
   );
