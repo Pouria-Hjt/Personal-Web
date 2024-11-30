@@ -4,7 +4,8 @@ import { Animate } from "@/ui/Animate/Animate";
 import { Card } from "@/ui/Card/Card";
 import GroupButton from "@/ui/GroupButton/GroupButton";
 import React from "react";
-
+import Profile from "/public/pouria-hajati-profile.png";
+import Image from "next/image";
 type Props = {};
 
 const BiographyCard = (props: Props) => {
@@ -22,16 +23,12 @@ const BiographyCard = (props: Props) => {
         animation="fade-up"
         duration={2000}
         as={"div"}
-        className="relative mx-auto my-7 aspect-square"
+        className="relative mx-auto my-7 aspect-square w-full p-1"
       >
         <div className="absolute left-1/2 top-1/2 aspect-square size-[calc(100%+1rem)] -translate-x-1/2 -translate-y-1/2">
           <img src="/images/user-wrapper.webp" alt="" className="size-full" />
         </div>
-        <img
-          className="rounded-full"
-          src="https://softivuspro.com/bentox/bontox/assets/images/banner/layla-husbent.png"
-          alt=""
-        />
+        <Image className="rounded-full" src={Profile} alt="profile" />
       </Animate>
       <GroupButton
         as={"a"}

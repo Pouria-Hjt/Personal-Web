@@ -1,7 +1,6 @@
 "use client";
 import { Animate } from "@/ui/Animate/Animate";
 import GroupButton from "@/ui/GroupButton/GroupButton";
-import Link from "next/link";
 import React, { useState } from "react";
 import { NavItem } from "./NavItem";
 import { pages } from "@/configs";
@@ -19,7 +18,7 @@ const Navbar = (props: Props) => {
         animation="fade-down"
         as={"div"}
         className={cn(
-          "bg-nav hover:shadow-nav nav-transition relative mx-auto my-4 flex w-full max-w-screen-lg flex-col items-center justify-between rounded-2.5xl border border-quaternary backdrop-blur-xl md:my-14 md:flex-row md:p-4 md:px-10 xl:max-w-screen-xl",
+          "bg-nav hover:shadow-nav nav-transition relative mx-auto my-4 flex w-full max-w-screen-lg flex-col items-center justify-between rounded-2.5xl border border-quaternary backdrop-blur-xl md:my-14 md:flex-row md:px-10 xl:max-w-screen-xl",
           "overflow-hidden", // Add overflow hidden to contain the animation
         )}
       >
