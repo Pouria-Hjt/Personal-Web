@@ -41,10 +41,10 @@ const Card = ({
   classNames,
 }: CardProps) => {
   return (
-    <div
-      // duration={duration || 1000}
-      // as={"div"}
-      // animation={animation}
+    <Animate
+      duration={duration || 1000}
+      as={"div"}
+      animation={animation}
       className={cn(
         "hover:shadow-box group relative flex w-full max-w-screen-md flex-col justify-between rounded-2.5xl border border-tertiary bg-secondary/40 p-4 xl:p-8",
         className ? className : "",
@@ -98,7 +98,7 @@ const Card = ({
           </Link>
         </Animate>
       )}
-    </div>
+    </Animate>
   );
 };
 

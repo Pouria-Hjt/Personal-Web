@@ -1,6 +1,7 @@
 import { ISocialBox } from "@/@types";
-import { InstagramIcon, TelegramIcon } from "@/assets/icons";
-import { XIcon } from "@/assets/icons/X.icon";
+import { InstagramIcon, TelegramIcon, XIcon } from "@/assets/icons";
+import { GithubIcon } from "@/assets/icons/techs";
+import { GithubOutline } from "@/assets/icons/techs/GithubOutline.icon";
 import { Card } from "@/ui/Card/Card";
 import { SocialBox } from "@/ui/SocialBox/SocialBox";
 import React from "react";
@@ -16,7 +17,7 @@ const socials: ISocialBox[] = [
     link: "https://www.telegram.com/",
   },
   {
-    icon: <XIcon className="size-8" />,
+    icon: <GithubOutline className="size-10" />,
     link: "https://www.x.com/",
   },
 ];

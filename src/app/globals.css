@@ -11,7 +11,8 @@
     );
   }
   .shadow-nav {
-    box-shadow: rgba(204, 219, 232, 0.109) 3px 3px 6px 0px inset,
+    box-shadow:
+      rgba(204, 219, 232, 0.109) 3px 3px 6px 0px inset,
       rgba(255, 255, 255, 0.081) -3px -3px 6px 1px inset;
   }
   .nav-transition {
@@ -22,8 +23,17 @@
     -o-transition: all 0.4s;
   }
   .shadow-box {
-    box-shadow: rgba(204, 219, 232, 0.05) 3px 3px 6px 0px inset,
+    box-shadow:
+      rgba(204, 219, 232, 0.05) 3px 3px 6px 0px inset,
       rgba(255, 255, 255, 0.033) -3px -3px 6px 1px inset;
+  }
+
+  .mobile-menu {
+    transition:
+      opacity 500ms ease,
+      visibility 500ms ease,
+      max-height 500ms ease,
+      height 500ms ease;
   }
 }
 
