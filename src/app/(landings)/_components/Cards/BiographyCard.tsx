@@ -15,18 +15,17 @@ const BiographyCard = (props: Props) => {
       footer={{
         link: pages.about,
         text: "Biography",
-      }}>
+      }}
+      className="h-[calc(100%-120px)] xl:h-[calc(100%-162px)]"
+    >
       <Animate
         animation="fade-up"
         duration={2000}
         as={"div"}
-        className="my-7 mx-auto aspect-square relative">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[calc(100%+1rem)] aspect-square">
-          <img
-            src="https://softivuspro.com/bentox/bontox/assets/images/global/img-resize.png"
-            alt=""
-            className="size-full"
-          />
+        className="relative mx-auto my-7 aspect-square"
+      >
+        <div className="absolute left-1/2 top-1/2 aspect-square size-[calc(100%+1rem)] -translate-x-1/2 -translate-y-1/2">
+          <img src="/images/user-wrapper.webp" alt="" className="size-full" />
         </div>
         <img
           className="rounded-full"
@@ -37,7 +36,7 @@ const BiographyCard = (props: Props) => {
       <GroupButton
         as={"a"}
         text="I'm Pouria Hajati"
-        className="gap-1 h-14 w-full"
+        className="h-14 w-full gap-1"
         href={pages.about}
         classNames={{
           textButton: "rounded-lg text-xl flex-1",
@@ -45,7 +44,7 @@ const BiographyCard = (props: Props) => {
         }}
         icon={<MessageIcon className="stroke-white" />}
       />
-      <p className="text-lg mt-5 mb-11">
+      <p className="mb-20 mt-5 text-base xl:mb-11 xl:text-lg">
         A Passionate Front-end Developer and Creative Thinker
       </p>
     </Card>

@@ -8,13 +8,10 @@ const SocialBox = ({ icon, link }: Props) => {
     <a
       href={link}
       target="_blank"
-      className="flex items-center justify-center size-[100px] border rounded-full relative aspect-square fill-white hover:fill-primary group/icon hover:border-transparent transition-all duration-1000">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[124px] aspect-square object-cover opacity-0 group-hover/icon:opacity-100 group-hover/icon:rotate-45  transition-all duration-1000">
-        <img
-          className="size-full"
-          src="https://softivuspro.com/bentox/bontox/assets/images/global/social-hover.png"
-          alt=""
-        />
+      className="group/icon relative flex aspect-square size-full max-w-[100px] items-center justify-center rounded-full border fill-white transition-all duration-1000 hover:border-transparent hover:fill-primary md:size-[100px]"
+    >
+      <div className="absolute left-1/2 top-1/2 aspect-square size-[124px] -translate-x-1/2 -translate-y-1/2 object-cover opacity-0 transition-all duration-1000 group-hover/icon:rotate-45 group-hover/icon:opacity-100">
+        <img className="size-full" src="/images/social-hover.webp" alt="" />
       </div>
       {icon}
     </a>

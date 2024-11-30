@@ -12,10 +12,15 @@ type Props = {
 
 const CenteredCard = ({ description, title, animation, className }: Props) => {
   return (
-    <Card animation={animation} className={cn("aspect-square", className)}>
-      <div className="size-full flex justify-center items-center flex-col">
-        <span className="text-6xl font-medium leading-150">+{title}</span>
-        <span className="text-center uppercase font-light text-lg leading-128">
+    <Card
+      animation={animation}
+      className={cn("h-fit md:h-[191px] xl:h-[212px]", className)}
+    >
+      <div className="flex size-full flex-col items-center justify-center">
+        <span className="text-[32px] font-medium leading-150 xl:text-6xl">
+          +{title}
+        </span>
+        <span className="text-center text-base font-light uppercase leading-128 xl:text-lg">
           {description}
         </span>
       </div>

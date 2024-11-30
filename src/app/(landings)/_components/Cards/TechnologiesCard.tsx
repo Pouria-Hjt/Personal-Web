@@ -41,24 +41,27 @@ const TechnologiesCard = (props: Props) => {
     <Card
       animation="fade"
       title="Technologies & Tools"
-      className="py-5 px-0"
+      className="max-w-[calc(100vw-32px)] overflow-hidden px-0 py-5"
       classNames={{
-        title: "text-2xl leading-[150%] px-6 mb-5",
-      }}>
+        title: "text-lg xl:text-2xl leading-[150%] px-6 mb-5",
+      }}
+    >
       <Marquee className="[--duration:40s] [--gap:8px]">
         {TechnologiesName.map((tech, i) => (
           <div
             key={`skill-${tech}--${i}`}
-            className="px-3 py-2 text-white/60 rounded-lg text-sm transition-all duration-200 ease-out border border-secondary hover:text-white hover:border-[#3d4043]">
+            className="rounded-lg border border-secondary px-3 py-2 text-sm text-white/60 transition-all duration-200 ease-out hover:border-[#3d4043] hover:text-white"
+          >
             {tech}
           </div>
         ))}
       </Marquee>
-      <Marquee className="[--duration:40s] [--gap:8px] mt-1" reverse>
+      <Marquee className="mt-1 [--duration:40s] [--gap:8px]" reverse>
         {TechnologiesIcons.map((icon, i) => (
           <div
             key={`icon-${i}`}
-            className="size-12 fill-primary flex justify-center items-center rounded-lg text-sm transition-all duration-500 ease-in-out border border-secondary hover:text-white hover:border-[#3d4043] hover:bg-primary hover:fill-white ">
+            className="flex size-12 items-center justify-center rounded-lg border border-secondary fill-primary text-sm transition-all duration-500 ease-in-out hover:border-[#3d4043] hover:bg-primary hover:fill-white hover:text-white"
+          >
             {icon}
           </div>
         ))}

@@ -14,17 +14,18 @@ const LatestWorksCard = (props: Props) => {
         icon: <StarsIcon />,
       }}
       classNames={{
-        title: "mb-5",
-        image: "top-5 right-5",
+        title: "mb-4",
+        image: "top-1 right-1 xl:top-5 xl:right-5",
       }}
       className="py-4"
       footer={{
         link: pages.works,
         text: "All projects",
-      }}>
-      <div className="mx-auto max-w-72 aspect-video w-fit h-fit p-1 bg-[#222426] rounded-2xl mb-4">
+      }}
+    >
+      <div className="mx-auto mb-4 aspect-video h-fit w-fit max-w-72 rounded-2xl bg-[#222426] p-1">
         <img
-          className="rounded-xl size-full"
+          className="size-full rounded-xl"
           src="https://softivuspro.com/bentox/bontox/assets/images/banner/latest-work1.png"
           alt=""
         />

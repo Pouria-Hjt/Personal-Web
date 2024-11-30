@@ -23,7 +23,7 @@ const socials: ISocialBox[] = [
 const SocialsCard = (props: Props) => {
   return (
     <Card animation="zoom-in-down" className="h-full">
-      <div className=" mx-auto flex flex-col gap-5 ">
+      <div className="grid h-full w-full grid-cols-3 justify-items-center gap-5 py-5 md:grid-cols-1">
         {socials.map((social) => (
           <SocialBox {...social} key={social.link} />
         ))}

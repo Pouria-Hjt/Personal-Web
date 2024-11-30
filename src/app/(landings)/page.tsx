@@ -9,35 +9,34 @@ import {
   TitleCard,
   TitledCard,
 } from "./_components";
-import { Card } from "@/ui/Card/Card";
 import { pages } from "@/configs";
 
 type Props = {};
 
 const Home = (props: Props) => {
   return (
-    <main className="max-w-screen-xl w-full mx-auto grid grid-cols-6 gap-6">
-      <div className="col-span-2 space-y-6">
+    <main className="mx-auto grid w-full max-w-[100vh] gap-4 px-4 lg:max-w-screen-lg lg:grid-cols-6 xl:max-w-screen-xl xl:gap-6">
+      <div className="mx-auto w-full space-y-4 md:w-fit lg:col-span-2 xl:space-y-6">
         <TitleCard />
         <BiographyCard />
       </div>
-      <div className="col-span-4">
-        <div className="grid grid-cols-2 gap-6">
-          <div className="space-y-6">
+      <div className="w-full lg:col-span-4">
+        <div className="grid gap-4 md:grid-cols-2 xl:gap-6">
+          <div className="space-y-4 xl:space-y-6">
             <LatestWorksCard />
             <TechnologiesCard />
           </div>
-          <div className="space-y-6">
+          <div className="space-y-4 xl:space-y-6">
             <MarqueeCard />
-            <div className="grid grid-cols-2 gap-6">
-              <div className="space-y-6 w-full">
+            <div className="xl grid gap-4 md:grid-cols-2 xl:gap-6">
+              <div className="w-full space-y-4 xl:space-y-6">
                 <CenteredCard
                   animation="fade-down"
                   description="YEARS EXPERIENCE"
                   title="03"
                 />
                 <CenteredCard
-                  className="!mt-[38px]"
+                  className="md:h-[212px] xl:h-[237px]"
                   animation="fade-up"
                   description="ToTal PROJECTS"
                   title="10"
@@ -47,28 +46,11 @@ const Home = (props: Props) => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-4 w-full mt-6 gap-6">
+        <div className="mt-4 grid w-full gap-4 md:grid-cols-4 xl:mt-6 xl:gap-6">
           <TitledCard
-            className="aspect-square w-full p-6"
+            className="w-full p-6 md:col-span-3"
             icon={{
-              src: "https://softivuspro.com/bentox/bontox/assets/images/global/s-shape1.png",
-              alt: "shape1",
-            }}
-            animation="fade-up-left"
-            footer={{
-              link: pages.offerings,
-              text: "All Services",
-              animation: "fade-up",
-            }}
-            classNames={{
-              image: "animate-none top-0 right-0",
-            }}
-            title="Services"
-          />
-          <TitledCard
-            className="w-full col-span-2 p-6"
-            icon={{
-              src: "https://softivuspro.com/bentox/bontox/assets/images/global/s-shape2.png",
+              src: "/images/s-shape2.webp",
               alt: "shape1",
             }}
             animation="fade-up"
@@ -78,14 +60,14 @@ const Home = (props: Props) => {
               animation: "fade-up",
             }}
             classNames={{
-              image: "animate-none ",
+              image: "!animate-none ",
             }}
             title="Let’s Works Together"
           />
           <TitledCard
-            className="aspect-square w-full p-6"
+            className="w-full p-6 md:aspect-square"
             icon={{
-              src: "https://softivuspro.com/bentox/bontox/assets/images/global/s-shape3.png",
+              src: "/images/s-shape3.webp",
               alt: "shape1",
             }}
             animation="fade-down-right"
@@ -95,7 +77,7 @@ const Home = (props: Props) => {
               animation: "fade-up",
             }}
             classNames={{
-              image: "animate-none top-0 ",
+              image: "!animate-none top-0 ",
             }}
             title="Blog"
           />

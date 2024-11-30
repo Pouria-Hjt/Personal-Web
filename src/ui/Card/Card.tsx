@@ -41,23 +41,25 @@ const Card = ({
   classNames,
 }: CardProps) => {
   return (
-    <Animate
-      duration={duration || 1000}
-      as={"div"}
-      animation={animation}
+    <div
+      // duration={duration || 1000}
+      // as={"div"}
+      // animation={animation}
       className={cn(
-        "group w-full rounded-2.5xl bg-secondary/40 p-8 border relative flex flex-col justify-between border-tertiary hover:shadow-box",
-        className ? className : ""
-      )}>
+        "hover:shadow-box group relative flex w-full max-w-screen-md flex-col justify-between rounded-2.5xl border border-tertiary bg-secondary/40 p-4 xl:p-8",
+        className ? className : "",
+      )}
+    >
       {title && (
         <h3
           className={cn(
-            " font-medium text-2xl leading-128",
+            "text-lg font-medium leading-128 xl:text-2xl",
             hoverableTitle
-              ? "text-white/40 group-hover:text-white transition-all duration-400"
+              ? "text-white/40 transition-all duration-400 group-hover:text-white"
               : "text-white",
-            classNames?.title
-          )}>
+            classNames?.title,
+          )}
+        >
           {title}
         </h3>
       )}
@@ -66,17 +68,18 @@ const Card = ({
         <img
           src={image?.src}
           className={cn(
-            "absolute top-4 right-5 animate-workdown !mt-0",
-            classNames?.image
+            "absolute right-1 top-1 animate-workdown xl:right-5 xl:top-4",
+            classNames?.image,
           )}
           alt={image.alt}
         />
       ) : (
         <span
           className={cn(
-            "absolute top-4 right-5 animate-workdown !mt-0",
-            classNames?.image
-          )}>
+            "absolute right-1 top-1 !mt-0 animate-workdown xl:right-5 xl:top-4",
+            classNames?.image,
+          )}
+        >
           {image?.icon}
         </span>
       )}
@@ -86,15 +89,16 @@ const Card = ({
         <Animate animation={footer.animation || "fade-up"} as={"div"}>
           <Link
             href={footer.link}
-            className="w-full flex justify-between items-center group/footer">
-            <span className="text-white font-medium transition-all duration-400 group-hover/footer:text-primary">
+            className="group/footer flex w-full items-center justify-between"
+          >
+            <span className="text-sm font-medium text-white transition-all duration-400 group-hover/footer:text-primary xl:text-base">
               {footer.text}
             </span>
-            <CardArrowIcon className="size-10 fill-white  transition-all duration-400 group-hover/footer:fill-primary" />
+            <CardArrowIcon className="size-10 fill-white transition-all duration-400 group-hover/footer:fill-primary" />
           </Link>
         </Animate>
       )}
-    </Animate>
+    </div>
   );
 };
 
