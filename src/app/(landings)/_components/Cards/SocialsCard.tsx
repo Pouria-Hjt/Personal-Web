@@ -10,15 +10,15 @@ type Props = {};
 const socials: ISocialBox[] = [
   {
     icon: <InstagramIcon className="size-10" />,
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/po._.riw",
   },
   {
     icon: <TelegramIcon className="size-10" />,
-    link: "https://www.telegram.com/",
+    link: "https://www.t.me/pouria_hajati",
   },
   {
     icon: <GithubOutline className="size-10" />,
-    link: "https://www.x.com/",
+    link: "https://github.com/Pouria-Hjt",
   },
 ];
 const SocialsCard = (props: Props) => {

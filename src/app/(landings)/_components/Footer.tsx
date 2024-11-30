@@ -10,7 +10,7 @@ const Footer = (props: Props) => {
       <div className="mx-auto flex w-full max-w-screen-lg flex-col items-center justify-between gap-1 md:flex-row xl:max-w-screen-xl">
         <div className="flex items-center justify-center gap-2.5">
           <span className="text-sm font-medium md:text-lg">
-            Copyright © 2024 BentoX
+            Copyright © 2024 Pouria-hjt
           </span>
           |
           <span className="text-sm md:text-lg">
