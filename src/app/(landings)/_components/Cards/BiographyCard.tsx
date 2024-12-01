@@ -1,11 +1,9 @@
 import { MessageIcon } from "@/assets/icons";
 import { pages } from "@/configs";
-import { Animate } from "@/ui/Animate/Animate";
 import { Card } from "@/ui/Card/Card";
 import GroupButton from "@/ui/GroupButton/GroupButton";
+import { Profile } from "@/ui/Profile/Profile";
 import React from "react";
-import Profile from "/public/pouria-hajati-profile.png";
-import Image from "next/image";
 type Props = {};
 
 const BiographyCard = (props: Props) => {
@@ -19,17 +17,7 @@ const BiographyCard = (props: Props) => {
       }}
       className="h-[calc(100%-120px)] xl:h-[calc(100%-162px)]"
     >
-      <Animate
-        animation="fade-up"
-        duration={2000}
-        as={"div"}
-        className="relative mx-auto my-7 aspect-square w-full max-w-64 p-1"
-      >
-        <div className="absolute left-1/2 top-1/2 aspect-square size-[calc(100%+1rem)] -translate-x-1/2 -translate-y-1/2">
-          <img src="/images/user-wrapper.webp" alt="" className="size-full" />
-        </div>
-        <Image className="rounded-full" src={Profile} alt="profile" />
-      </Animate>
+      <Profile />
       <GroupButton
         as={"a"}
         text="I'm Pouria Hajati"

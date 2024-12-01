@@ -4,6 +4,7 @@ import { Card } from "@/ui/Card/Card";
 import CrispyLand from "../../../../../public/crispy-land.png";
 import React from "react";
 import Image from "next/image";
+import { Profile } from "@/ui/Profile/Profile";
 
 type Props = {};
 
@@ -13,6 +14,7 @@ const LatestWorksCard = (props: Props) => {
       title="See My Latest Works"
       animation="zoom-in-left"
       image={{
+        alt: "Star Icon",
         icon: <StarsIcon />,
       }}
       classNames={{
@@ -29,7 +31,7 @@ const LatestWorksCard = (props: Props) => {
         <Image
           className="size-full rounded-xl object-cover object-top"
           src={CrispyLand}
-          alt=""
+          alt="CrispyLand"
         />
       </div>
     </Card>

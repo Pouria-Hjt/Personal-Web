@@ -4,10 +4,11 @@ import { Animations } from "@/@types";
 import { cn } from "@/utils";
 import { CardArrowIcon } from "@/assets/icons";
 import Link from "next/link";
+import Image from "next/image";
 
 type CardImage = {
   src?: string;
-  alt?: string;
+  alt: string;
   icon?: JSX.Element;
 };
 
@@ -64,9 +65,11 @@ const Card = ({
         </h3>
       )}
 
-      {image && !image.icon ? (
-        <img
+      {image && !image.icon && image.src ? (
+        <Image
           src={image?.src}
+          width={50}
+          height={50}
           className={cn(
             "absolute right-1 top-1 animate-workdown xl:right-5 xl:top-4",
             classNames?.image,
