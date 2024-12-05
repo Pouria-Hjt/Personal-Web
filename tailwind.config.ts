@@ -18,6 +18,7 @@ const config: Config = {
         "2.5xl": "1.25rem",
       },
       spacing: {
+        8.5: "2.125rem",
         18: "4.5rem",
       },
       transitionDuration: {

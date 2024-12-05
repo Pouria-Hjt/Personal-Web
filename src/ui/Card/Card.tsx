@@ -13,7 +13,7 @@ type CardImage = {
 };
 
 export type CardProps = {
-  title?: string;
+  title?: string | string[];
   hoverableTitle?: boolean;
   image?: CardImage;
   animation: Animations;
@@ -51,18 +51,37 @@ const Card = ({
         className ? className : "",
       )}
     >
-      {title && (
-        <h3
-          className={cn(
-            "text-lg font-medium leading-128 xl:text-2xl",
-            hoverableTitle
-              ? "text-white/40 transition-all duration-400 group-hover:text-white"
-              : "text-white",
-            classNames?.title,
-          )}
-        >
-          {title}
-        </h3>
+      {title && Array.isArray(title) ? (
+        <div>
+          {title.map((t, i) => (
+            <h3
+              key={`${t}-${i}`}
+              className={cn(
+                "text-lg font-medium leading-128 xl:text-2xl",
+                hoverableTitle
+                  ? "text-white/40 transition-all duration-400 group-hover:text-white"
+                  : "text-white",
+                classNames?.title,
+              )}
+            >
+              {t}
+            </h3>
+          ))}
+        </div>
+      ) : (
+        <>
+          <h3
+            className={cn(
+              "text-lg font-medium leading-128 xl:text-2xl",
+              hoverableTitle
+                ? "text-white/40 transition-all duration-400 group-hover:text-white"
+                : "text-white",
+              classNames?.title,
+            )}
+          >
+            {title}
+          </h3>
+        </>
       )}
 
       {image && !image.icon && image.src ? (

@@ -4,12 +4,14 @@ import Image from "next/image";
 import ProfileImage from "/public/pouria-hajati-profile.png";
 import ProfileWrapper from "/public/images/user-wrapper.webp";
 
-type Props = {};
+type Props = {
+  disableAnimation?: boolean;
+};
 
-const Profile = (props: Props) => {
+const Profile = ({ disableAnimation }: Props) => {
   return (
     <Animate
-      animation="fade-up"
+      animation={disableAnimation ? "" : "fade-up"}
       duration={2000}
       as={"div"}
       className="relative mx-auto my-7 aspect-square w-full max-w-64 p-1"
