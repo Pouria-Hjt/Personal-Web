@@ -14,7 +14,7 @@ const SingleExperience = ({ company, from, to }: SingleExperienceProps) => {
       <div className="flex w-full flex-wrap items-center gap-2.5">
         <ExperienceArrowIcon />
         <span>
-          {from} // {to}
+          {from} {"//"} {to}
         </span>
       </div>
       <div className="ml-8.5 flex w-full flex-wrap items-center gap-2.5">
