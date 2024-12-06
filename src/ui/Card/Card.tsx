@@ -13,7 +13,7 @@ type CardImage = {
 };
 
 export type CardProps = {
-  title?: string;
+  title?: string | string[];
   hoverableTitle?: boolean;
   image?: CardImage;
   animation: Animations;
@@ -42,27 +42,46 @@ const Card = ({
   classNames,
 }: CardProps) => {
   return (
-    <Animate
-      duration={duration || 1000}
-      as={"div"}
-      animation={animation}
+    <div
+      // duration={duration || 1000}
+      // as={"div"}
+      // animation={animation}
       className={cn(
-        "hover:shadow-box group relative flex w-full max-w-screen-md flex-col justify-between rounded-2.5xl border border-tertiary bg-secondary/40 p-4 xl:p-8",
+        "hover:shadow-box group relative flex w-full max-w-screen-md flex-col justify-between rounded-2.5xl border border-tertiary bg-secondary/40 p-4 md:max-w-screen-lg lg:max-w-screen-xl xl:p-8",
         className ? className : "",
       )}
     >
-      {title && (
-        <h3
-          className={cn(
-            "text-lg font-medium leading-128 xl:text-2xl",
-            hoverableTitle
-              ? "text-white/40 transition-all duration-400 group-hover:text-white"
-              : "text-white",
-            classNames?.title,
-          )}
-        >
-          {title}
-        </h3>
+      {title && Array.isArray(title) ? (
+        <div>
+          {title.map((t, i) => (
+            <h3
+              key={`${t}-${i}`}
+              className={cn(
+                "text-lg font-medium leading-128 xl:text-2xl",
+                hoverableTitle
+                  ? "text-white/40 transition-all duration-400 group-hover:text-white"
+                  : "text-white",
+                classNames?.title,
+              )}
+            >
+              {t}
+            </h3>
+          ))}
+        </div>
+      ) : (
+        <>
+          <h3
+            className={cn(
+              "text-lg font-medium leading-128 xl:text-2xl",
+              hoverableTitle
+                ? "text-white/40 transition-all duration-400 group-hover:text-white"
+                : "text-white",
+              classNames?.title,
+            )}
+          >
+            {title}
+          </h3>
+        </>
       )}
 
       {image && !image.icon && image.src ? (
@@ -101,7 +120,7 @@ const Card = ({
           </Link>
         </Animate>
       )}
-    </Animate>
+    </div>
   );
 };
 
