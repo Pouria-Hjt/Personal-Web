@@ -51,7 +51,10 @@ const ExperienceCard = (props: Props) => {
     >
       <div className="mt-6 space-y-6">
         {experiences.map((experience, index) => (
-          <SingleExperience {...experience} />
+          <SingleExperience
+            key={`${experience.company}-${index}`}
+            {...experience}
+          />
         ))}
       </div>
     </Card>
