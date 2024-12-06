@@ -1,0 +1,1 @@
+export { WhatIdoCard } from "./WhatIdoCard"

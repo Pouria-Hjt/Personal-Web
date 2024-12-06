@@ -14,7 +14,7 @@ const Profile = ({ disableAnimation }: Props) => {
       animation={disableAnimation ? "" : "fade-up"}
       duration={2000}
       as={"div"}
-      className="relative mx-auto my-7 aspect-square w-full max-w-64 p-1"
+      className="relative mx-auto aspect-square h-full max-h-64 w-full max-w-64 p-1 md:my-7"
     >
       <div className="absolute left-1/2 top-1/2 aspect-square size-[calc(100%+1rem)] -translate-x-1/2 -translate-y-1/2">
         <Image src={ProfileWrapper} alt="user-wrapper" className="size-full" />

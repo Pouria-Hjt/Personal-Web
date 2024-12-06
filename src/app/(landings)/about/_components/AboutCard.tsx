@@ -8,7 +8,7 @@ const AboutCard = (props: Props) => {
     <Card
       animation="zoom-in-down"
       duration={1400}
-      className="col-span-8 w-full max-w-none"
+      className="w-full max-w-none lg:col-span-8"
       classNames={{
         title: "xl:text-4xl leading-128",
       }}
